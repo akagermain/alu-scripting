@@ -1,2 +1,3 @@
 #!/usr/bin/env ruby
-pattern = "[School]"
+
+pattern = "[School]+"
