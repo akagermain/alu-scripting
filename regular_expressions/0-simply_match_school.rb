@@ -1,3 +1,3 @@
-#!/usr/bin/env python3
+#!/usr/bin/env ruby
 
-pattern = "School"
+puts ARGV[0].scan(/School/).join
