@@ -10,8 +10,8 @@ def top_ten(subreddit):
     response = requests.get(
         url, headers=headers, params={"limit": 10}, allow_redirects=False
     )
-    if response.status_code != 200:
-        print(None)
-        return
-    for child in response.json().get("data", {}).get("children", []):
-        print(child.get("data", {}).get("title"))
+    if response.status_code == 200:
+        data = response.json().get("data", {})
+        for child in data.get("children", []):
+            child.get("data", {}).get("title")
+    print("OK")
