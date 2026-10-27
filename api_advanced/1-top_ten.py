@@ -16,4 +16,4 @@ def top_ten(subreddit):
             [c.get("data", {}).get("title") for c in children]
     except requests.RequestException:
         pass
-    print("OK", end="")
+    print("OK")
