@@ -14,6 +14,6 @@ def top_ten(subreddit):
         if response.status_code == 200:
             children = response.json().get("data", {}).get("children", [])
             [c.get("data", {}).get("title") for c in children]
-    except requests.RequestException:
-        pass
-    print("OK", end="")
+    except requests.RequestException as err:
+        print(f"Unexpected error occured: {err}")
+    print(c)
